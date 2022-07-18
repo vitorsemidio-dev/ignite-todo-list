@@ -3,6 +3,23 @@
   max-width: 736px;
 }
 
+.taskListEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 8px;
+  color: var(--gray-300);
+  border-top: 1px solid var(--gray-400);
+  padding: 8rem 3rem;
+  margin-top: 1.5rem;
+}
+
+.boldText {
+  font-weight: bold;
+}
+
 .taskInfoContainer {
   display: flex;
   justify-content: space-between;
@@ -64,6 +81,7 @@
 .titleTaskCompleted {
   flex: 1;
   text-decoration: line-through;
+  color: var(--gray-300);
 }
 
 .checkbox {

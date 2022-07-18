@@ -13,7 +13,7 @@
   --blue-500: #4EA8DE;
   --blue-700: #1E6F9F;
 
-  --red-500: #E25858; 
+  --red-500: #E25858;
 }
 
 :focus {
@@ -46,4 +46,18 @@ body, input, textarea, button {
 
 button, [role="button"] {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 1em;
+}
+::-webkit-scrollbar-track {
+  background: var(--gray-500);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue-500);
+  border-radius: 15px;
+  height: 2px;
 }

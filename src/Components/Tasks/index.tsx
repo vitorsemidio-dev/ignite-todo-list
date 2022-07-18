@@ -1,4 +1,4 @@
-import { Trash } from "phosphor-react";
+import { ClipboardText, Trash } from "phosphor-react";
 import styles from "./Tasks.module.css";
 
 type Task = {
@@ -46,34 +46,46 @@ export function Tasks({ tasks, onCompleteTask, onRemoveTask }: TasksProps) {
           </span>
         </p>
       </div>
-      <div className={styles.taskListContainer}>
-        {tasks.map((task) => {
-          return (
-            <div key={task.id} className={styles.taskItemContainer}>
-              <input
-                className={styles.checkbox}
-                type="checkbox"
-                checked={task.isCompleted}
-                onChange={() => handleCheckChange(task.id)}
-              />
-              <p
-                className={
-                  task.isCompleted
-                    ? styles.titleTaskCompleted
-                    : styles.titleTask
-                }>
-                {task.title}
-              </p>
-              <Trash
-                role="button"
-                className={styles.removeIcon}
-                size={20}
-                onClick={() => handleRemoveTask(task.id)}
-              />
-            </div>
-          );
-        })}
-      </div>
+      {tasks.length === 0 ? (
+        <div className={styles.taskListEmpty}>
+          <ClipboardText size={80} />
+          <div>
+            <p className={styles.boldText}>
+              Você ainda não tem tarefas cadastradas
+            </p>
+            <p>Crie tarefas e organize seus itens a fazer</p>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.taskListContainer}>
+          {tasks.map((task) => {
+            return (
+              <div key={task.id} className={styles.taskItemContainer}>
+                <input
+                  className={styles.checkbox}
+                  type="checkbox"
+                  checked={task.isCompleted}
+                  onChange={() => handleCheckChange(task.id)}
+                />
+                <p
+                  className={
+                    task.isCompleted
+                      ? styles.titleTaskCompleted
+                      : styles.titleTask
+                  }>
+                  {task.title}
+                </p>
+                <Trash
+                  role="button"
+                  className={styles.removeIcon}
+                  size={20}
+                  onClick={() => handleRemoveTask(task.id)}
+                />
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
