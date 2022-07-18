@@ -1,7 +1,9 @@
+import { Header } from "./Components/Header";
+
 export function App() {
   return (
     <div>
-      <h1>Ignite ToDo List</h1>
+      <Header />
     </div>
   );
 }
