@@ -1,6 +1,7 @@
 import { NewTask } from "./Components/NewTask";
 import { Header } from "./Components/Header";
 import { useState } from "react";
+import { Tasks } from "./Components/Tasks";
 
 type Task = {
   id: string;
@@ -17,10 +18,25 @@ export function App() {
     setTasks((state) => [...state, newTask]);
   }
 
+  function toggleStateCompleteTask(taskId: string) {
+    setTasks((state) => {
+      return state.map((taskItem) => {
+        if (taskItem.id === taskId) {
+          return {
+            ...taskItem,
+            isCompleted: !taskItem.isCompleted,
+          };
+        }
+        return taskItem;
+      });
+    });
+  }
+
   return (
     <div>
       <Header />
       <NewTask onCreateNewTask={addNewTask} />
+      <Tasks onCompleteTask={toggleStateCompleteTask} tasks={tasks} />
     </div>
   );
 }
