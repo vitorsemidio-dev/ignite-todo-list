@@ -18,6 +18,12 @@ export function App() {
     setTasks((state) => [...state, newTask]);
   }
 
+  function removeTask(taskId: string) {
+    setTasks((state) => {
+      return state.filter((taskItem) => taskItem.id !== taskId);
+    });
+  }
+
   function toggleStateCompleteTask(taskId: string) {
     setTasks((state) => {
       return state.map((taskItem) => {
@@ -36,7 +42,11 @@ export function App() {
     <div>
       <Header />
       <NewTask onCreateNewTask={addNewTask} />
-      <Tasks onCompleteTask={toggleStateCompleteTask} tasks={tasks} />
+      <Tasks
+        onCompleteTask={toggleStateCompleteTask}
+        onRemoveTask={removeTask}
+        tasks={tasks}
+      />
     </div>
   );
 }

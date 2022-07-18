@@ -10,11 +10,16 @@ type Task = {
 interface TasksProps {
   tasks: Task[];
   onCompleteTask: (taskId: string) => void;
+  onRemoveTask: (taskId: string) => void;
 }
 
-export function Tasks({ tasks, onCompleteTask }: TasksProps) {
+export function Tasks({ tasks, onCompleteTask, onRemoveTask }: TasksProps) {
   function handleCheckChange(taskId: string) {
     onCompleteTask(taskId);
+  }
+
+  function handleRemoveTask(taskId: string) {
+    onRemoveTask(taskId);
   }
 
   return (
@@ -34,7 +39,12 @@ export function Tasks({ tasks, onCompleteTask }: TasksProps) {
               }>
               {task.title}
             </p>
-            <Trash role="button" className={styles.removeIcon} size={20} />
+            <Trash
+              role="button"
+              className={styles.removeIcon}
+              size={20}
+              onClick={() => handleRemoveTask(task.id)}
+            />
           </div>
         );
       })}
