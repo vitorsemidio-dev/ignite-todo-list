@@ -1,0 +1,40 @@
+.addTaskContainer {
+  max-width: 736px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translateY(-50%);
+}
+
+.input {
+  flex: 1;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  background-color: var(--gray-500);
+}
+
+.input::placeholder {
+  color: var(--gray-300);
+}
+
+.button {
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+  background-color: var(--blue-700);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  
+}
+
+.button:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
