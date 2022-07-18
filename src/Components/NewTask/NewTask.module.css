@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transform: translateY(-50%);
+  height: 54px;
+  margin-top: calc((54px / 2) * -1 );
 }
 
 .input {

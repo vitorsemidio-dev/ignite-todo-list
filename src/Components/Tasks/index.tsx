@@ -48,7 +48,7 @@ export function Tasks({ tasks, onCompleteTask, onRemoveTask }: TasksProps) {
       </div>
       {tasks.length === 0 ? (
         <div className={styles.taskListEmpty}>
-          <ClipboardText size={80} />
+          <ClipboardText size={56} />
           <div>
             <p className={styles.boldText}>
               Você ainda não tem tarefas cadastradas
