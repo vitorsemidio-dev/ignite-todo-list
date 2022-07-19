@@ -25,10 +25,10 @@
 
 Este projeto foi um dos desafios da Trilha ReactJS. Nesse desafio, foi desenvolvido uma aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
 
-[x] Adicionar uma nova tarefa
-[x] Marcar e desmarcar uma tarefa como concluída
-[x] Remover uma tarefa da listagem
-[x] Mostrar o progresso de conclusão das tarefas
+- [x] Adicionar uma nova tarefa
+- [x] Marcar e desmarcar uma tarefa como concluída
+- [x] Remover uma tarefa da listagem
+- [x] Mostrar o progresso de conclusão das tarefas
 
 Projeto foi hospedado na Vercel. Acesse o **Ignite Timer** desenvolvido [clicando aqui](https://ignite-todo-list-vitorsemidio-dev.vercel.app/).
 
