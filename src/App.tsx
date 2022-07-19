@@ -1,6 +1,7 @@
-import { NewTask } from "./Components/NewTask";
-import { Header } from "./Components/Header";
 import { useState } from "react";
+import styles from "./App.module.css";
+import { Header } from "./Components/Header";
+import { NewTask } from "./Components/NewTask";
 import { Tasks } from "./Components/Tasks";
 
 type Task = {
@@ -39,7 +40,7 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className={styles.app}>
       <Header />
       <NewTask onCreateNewTask={addNewTask} />
       <Tasks

@@ -78,7 +78,7 @@ export function Tasks({ tasks, onCompleteTask, onRemoveTask }: TasksProps) {
                 <Trash
                   role="button"
                   className={styles.removeIcon}
-                  size={20}
+                  size={24}
                   onClick={() => handleRemoveTask(task.id)}
                 />
               </div>

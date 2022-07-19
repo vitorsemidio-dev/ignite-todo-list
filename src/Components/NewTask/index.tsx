@@ -1,6 +1,6 @@
-import styles from "./NewTask.module.css";
 import { PlusCircle } from "phosphor-react";
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
+import styles from "./NewTask.module.css";
 
 interface NewTaskProps {
   onCreateNewTask: (title: string) => void;
